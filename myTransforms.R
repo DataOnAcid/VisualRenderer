@@ -1,4 +1,7 @@
-###myTransforms.R
+###
+#	myTransforms.R - script to mangle data with a variety of transforms, 
+#	and print out to a file called 'output_sq.tdf'
+###
 
 #get args
 args <- commandArgs(trailingOnly = TRUE)
