@@ -20,6 +20,5 @@ for(j in 2:128){
 	cumsum[j] = cumsum[j-1] + dataMat[j,i]
 }
 #	a = sqrt(abs(as.double(fourier_this)))
-output = data.frame(series=rep(1,128),sqrt(abs(fourier_this_re)),sqrt(abs(fourier_this_im)),cumsum)
-write.table(output,file=paste("output_sq_",args[1],".tdf",sep=''),sep="\t",row.names=F)	
-
+output = data.frame(series=rep(1,128),fourier_this_re,fourier_this_im,cumsum)
+write.table(output,file=paste("output_sq.tdf",sep=''),sep="\t",row.names=F)
