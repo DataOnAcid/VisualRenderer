@@ -1,7 +1,11 @@
 #!/bin/sh
 
-rm -f file image.png
+rm -f file output_sq.tdf image.png
+
 wget -qO file $1
-python ./plot-bokeh.py file
+
+Rscript myTransforms.R file
+
+python ./plot-bokeh.py output_sq.tdf
 cat image.png
-rm -f file image.png
+rm -f file output_sq.tdf image.png
