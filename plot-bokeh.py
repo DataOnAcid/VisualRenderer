@@ -35,3 +35,5 @@ output_file("image.html", title="image.py example")
 
 p = figure(title="Data on Acid",x_range=[0, 200], y_range=[0, 200])
 p.image(image=[SurfaceMesh], x=[0], y=[0], dw=[200], dh=[200], palette="Spectral11")
+
+save(p)
