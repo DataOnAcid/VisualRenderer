@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm -f file image.png
+wget -qO file $1
+python ./plot-bokeh.py file
+cat image.png
+rm -f file image.png
