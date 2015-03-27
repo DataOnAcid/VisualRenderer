@@ -11,9 +11,12 @@ args <- commandArgs(trailingOnly = TRUE)
 dataMat = read.table(args[1])
 #cat(str(dataMat),sep="\n")
 #screw them up a bit
-output = data.frame(series=rep(0,7*128),fourier_re=rep(0,7*128),fourier_im=rep(0,7*128),cumulative=rep(0,7*128))
-i=1
-fourier_this = fft(dataMat[,i])
+#output = data.frame(series=rep(0,128),fourier_re=rep(0,128),fourier_im=rep(0,128),cumulative=rep(0,128))
+
+#look at only the first column if more than one is present
+i = 1	
+max_values = 128
+fourier_this = fft(dataMat[1:max_values,i])
 fourier_this_re = Re(fourier_this)
 fourier_this_im = Im(fourier_this)
 #cat(fourier_this)
